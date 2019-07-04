@@ -1,0 +1,25 @@
+wlan
+192.168.10.11    70:f1:1c:26:07:68
+192.168.10.33    70:f1:1c:26:07:69
+192.168.10.44    70:f1:1c:26:07:8e
+192.168.10.55    70:f1:1c:26:07:cb
+192.168.10.66    70:f1:1c:19:2d:61
+192.168.10.77    70:f1:1c:19:2d:d1
+192.168.10.88    7c:dd:90:dd:93:34
+192.168.10.99    7c:dd:90:dd:93:2e
+192.168.10.100   70:f1:1c:26:07:8a
+192.168.10.110   70:f1:1c:26:07:6e
+
+
+iptables
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:68   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:69   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:8e   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:cb   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:19:2d:61   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:19:2d:d1   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 7c:dd:90:dd:93:34  -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 7c:dd:90:dd:93:2e  -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:8a   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:6e   -j DROP
+
