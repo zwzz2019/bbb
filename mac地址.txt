@@ -1,4 +1,5 @@
 wlan
+192.168.10.1     b8:27:eb:e5:c6:e0 70:f1:1c:26:0f:df
 192.168.10.11    70:f1:1c:26:07:68
 192.168.10.33    70:f1:1c:26:07:69
 192.168.10.44    70:f1:1c:26:07:8e
@@ -11,7 +12,20 @@ wlan
 192.168.10.110   70:f1:1c:26:07:6e
 
 
-iptables
+rc.local
+
+#!/bin/bash
+#
+sleep 20s
+ifconfig wlan0 down
+iwconfig wlan0 mode ad-hoc
+iwconfig wlan0 essid adhoc
+iwconfig wlan0 channel 11
+ifconfig wlan0 192.168.10.33
+ifconfig wlan0 up
+
+#iptables -A INPUT -p ALL -m mac --mac-source b8:27:eb:e5:c6:e0   -j DROP
+#iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:0f:df   -j DROP
 #iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:68   -j DROP
 #iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:69   -j DROP
 #iptables -A INPUT -p ALL -m mac --mac-source 70:f1:1c:26:07:8e   -j DROP
